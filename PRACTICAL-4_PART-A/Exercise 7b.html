@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist with remove option</title>
+    <link rel="stylesheet" href="exercise7.css">
+    <script>
+        window.onload = function() {
+            const addButton = document.getElementById('addButton');
+            const songTextInput = document.getElementById('songTextInput');
+            const playlist = document.getElementById('playlist');
+
+            // Function to add delete link/icon to a song
+            function addDeleteLink(li) {
+                const deleteLink = document.createElement('a');
+                deleteLink.href = "#";
+                deleteLink.textContent = " ❌"; // Delete icon (X)
+                deleteLink.style.marginLeft = "10px";
+
+                // Add click event to delete the song when the link is clicked
+                deleteLink.onclick = function(e) {
+                    e.preventDefault(); // Prevent the default link behavior
+                    playlist.removeChild(li); // Remove the list item
+                };
+
+                li.appendChild(deleteLink); // Append the delete link to the song list item
+            }
+
+            // Add event listener for the "Add Song" button
+            addButton.onclick = function() {
+                const songName = songTextInput.value.trim();
+
+                if (songName !== "") {
+                    const li = document.createElement('li');
+                    li.textContent = songName;
+                    addDeleteLink(li); // Add the delete link to each new song
+
+                    playlist.appendChild(li);
+
+                    songTextInput.value = ""; // Clear input field
+                } else {
+                    alert("Please enter a song name.");
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song">
+</form>
+
+<ul id="playlist">
+</ul>
+
+</body>
+</html>

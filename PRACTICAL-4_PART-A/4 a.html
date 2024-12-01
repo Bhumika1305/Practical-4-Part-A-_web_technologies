@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Bootstrap Website</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    .hero {
+      height: 100vh;
+      background: url('background.jfif') no-repeat center center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .services {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    .service-box {
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+    }
+    .contact-form {
+      padding: 60px 0;
+      background-color: #343a40;
+      color: white;
+    }
+    .contact-form h2 {
+      color: white;
+    }
+    .custom-btn {
+      background-color: #28a745;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+    }
+    .custom-btn:hover {
+      background-color: #218838;
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex flex-column justify-content-center align-items-center">
+    <h1>Welcome to Our Modern Website</h1>
+    <p class="lead">We provide great services for your business.</p>
+    <a href="#services" class="btn btn-primary mt-4">Explore Our Services</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services text-center">
+    <div class="container">
+      <h2 class="mb-5">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <i class="fas fa-laptop-code fa-3x mb-4"></i>
+            <h4>Web Development</h4>
+            <p>We build stunning and efficient websites for your business.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <i class="fas fa-mobile-alt fa-3x mb-4"></i>
+            <h4>Mobile App Development</h4>
+            <p>Create mobile apps that stand out from the competition.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <i class="fas fa-cloud fa-3x mb-4"></i>
+            <h4>Cloud Solutions</h4>
+            <p>Reliable cloud services to help your business grow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-form text-center">
+    <div class="container">
+      <h2 class="mb-5">Get in Touch</h2>
+      <form>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="custom-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Modern Bootstrap Website. </p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome for icons -->
+</body>
+</html>
+
+
+
+
+

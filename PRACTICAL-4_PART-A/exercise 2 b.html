@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing div color on click</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+
+    <script>
+        // Array of arbitrary colors
+        const colors = ["blue", "red", "green", "yellow", "purple", "orange"];
+        
+        // Select a random initial color index
+        let currentIndex = Math.floor(Math.random() * colors.length);
+
+        // Set initial color randomly from the array
+        const div = document.getElementById("mydiv");
+        div.style.backgroundColor = colors[currentIndex];
+
+        // Function to handle click and change color
+        div.onclick = function() {
+            // Increment color index and wrap around using modulus
+            currentIndex = (currentIndex + 1) % colors.length;
+            // Set the new color
+            div.style.backgroundColor = colors[currentIndex];
+        };
+    </script>
+</body>
+</html>

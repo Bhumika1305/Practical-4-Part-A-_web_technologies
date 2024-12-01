@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Popups</title>
+    <script type="text/javascript">
+        function openInfinitePopups() {
+            const content = 'data:text/html,<html><body><h1>You opened a popup!</h1><p>Close this if you can! 😈</p></body></html>';
+            while (true) {
+                window.open(content, '_blank', 'width=300,height=200');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openInfinitePopups()">Click here</button>
+</body>
+</html>

